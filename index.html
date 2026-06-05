@@ -17,6 +17,9 @@
         <h1 class="hdr-title">SLSA Media & Outreach — Strategic Report</h1>
         <div class="hdr-sub">Sri Lanka Scout Association · Analysis by Lochana Karunarathna</div>
       </div>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+        🌙
+      </button>
     </div>
     
     <div class="stat-grid">
@@ -491,36 +494,7 @@
 
 </div>
 
-<script>
-  function toggle(id) {
-    const el = document.getElementById(id);
-    const icon = document.getElementById(id + '-icon');
-    
-    if (el.classList.contains('open')) {
-      el.classList.remove('open');
-      icon.classList.remove('open');
-    } else {
-      el.classList.add('open');
-      icon.classList.add('open');
-    }
-  }
-
-  function showPanel(panelId, activeTabButton) {
-    // Hide all functional layout containers
-    document.querySelectorAll('.panel').forEach(panel => {
-      panel.classList.remove('active');
-    });
-    
-    // Reset active structural states on navigation array
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.classList.remove('active');
-    });
-    
-    // Inject active visibility definitions
-    document.getElementById(panelId).classList.add('active');
-    activeTabButton.classList.add('active');
-  }
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
