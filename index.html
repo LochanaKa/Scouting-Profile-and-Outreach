@@ -53,6 +53,7 @@
       <button class="tab" onclick="showPanel('p2', this)">Additional Suggestions</button>
       <button class="tab" onclick="showPanel('p3', this)">Strategic Timeline</button>
       <button class="tab" onclick="showPanel('p4',this)">Committee Hierarchy</button>
+      <button class="tab" onclick="showPanel('p5',this)">Media Categories</button>
     </div>
 
     <div id="p1" class="panel active">
@@ -1071,6 +1072,253 @@
       </div>
     </div>
 
+    <div id="p5" class="panel">
+
+      <!-- Intro -->
+      <div class="mc-intro">
+        <div class="mc-intro-title">Media Categories & Specialisations</div>
+        <div class="mc-intro-sub">The SLSA Scouting Profile & Media Outreach Committee operates across 12 specialised
+          media categories grouped into 4 wings. Every scout who applies to the Open Call selects their primary category
+          — this determines which wing they join and what role they play in national media coverage.</div>
+        <div class="mc-stats">
+          <div class="mc-stat">
+            <div class="mc-stat-v">12</div>
+            <div class="mc-stat-l">Categories</div>
+          </div>
+          <div class="mc-stat">
+            <div class="mc-stat-v">4</div>
+            <div class="mc-stat-l">Wings</div>
+          </div>
+          <div class="mc-stat">
+            <div class="mc-stat-v">3</div>
+            <div class="mc-stat-l">Languages</div>
+          </div>
+          <div class="mc-stat">
+            <div class="mc-stat-v">All</div>
+            <div class="mc-stat-l">Scout sections</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wing legend -->
+      <div class="mc-legend">
+        <span class="mc-legend-tag" style="background:var(--color-primary-light);color:var(--color-primary-text)">●
+          Visual & Camera Wing</span>
+        <span class="mc-legend-tag" style="background:var(--color-success-light);color:var(--color-success-text)">●
+          Content & Language Wing</span>
+        <span class="mc-legend-tag" style="background:var(--color-warning-light);color:var(--color-warning-text)">●
+          Social & Digital Wing</span>
+        <span class="mc-legend-tag" style="background:var(--color-danger-light);color:var(--color-danger-text)">● Design
+          & Technical Wing</span>
+      </div>
+
+      <!-- Visual & Camera Wing -->
+      <div class="mc-wing-label">Visual & Camera Wing</div>
+      <div class="mc-grid">
+
+        <div class="mc-card" style="border-left-color:var(--color-primary)">
+          <div class="mc-icon">📷</div>
+          <div class="mc-num">01</div>
+          <div class="mc-name">Photography</div>
+          <div class="mc-desc">Event photography, portrait, documentary, and drone photography. Creating the official
+            visual archive of SLSA events island-wide.</div>
+          <div class="mc-tools">
+            <span class="mc-tool"
+              style="background:var(--color-primary-light);color:var(--color-primary-text)">Lightroom</span>
+            <span class="mc-tool"
+              style="background:var(--color-primary-light);color:var(--color-primary-text)">Photoshop</span>
+            <span class="mc-tool"
+              style="background:var(--color-primary-light);color:var(--color-primary-text)">DSLR</span>
+          </div>
+        </div>
+
+        <div class="mc-card" style="border-left-color:var(--color-primary)">
+          <div class="mc-icon">🎥</div>
+          <div class="mc-num">02</div>
+          <div class="mc-name">Videography</div>
+          <div class="mc-desc">Event filming, short documentary films, scout interviews, on-ground live recording, and
+            footage capture at all national events.</div>
+          <div class="mc-tools">
+            <span class="mc-tool"
+              style="background:var(--color-primary-light);color:var(--color-primary-text)">DSLR</span>
+            <span class="mc-tool"
+              style="background:var(--color-primary-light);color:var(--color-primary-text)">Mirrorless</span>
+            <span class="mc-tool"
+              style="background:var(--color-primary-light);color:var(--color-primary-text)">Gimbal</span>
+          </div>
+        </div>
+
+        <div class="mc-card" style="border-left-color:var(--color-primary)">
+          <div class="mc-icon">✂️</div>
+          <div class="mc-num">03</div>
+          <div class="mc-name">Video Editing</div>
+          <div class="mc-desc">Post-production for Reels, YouTube content, event highlight videos, and short-form social
+            content. AI-assisted editing encouraged.</div>
+          <div class="mc-tools">
+            <span class="mc-tool"
+              style="background:var(--color-primary-light);color:var(--color-primary-text)">Premiere</span>
+            <span class="mc-tool"
+              style="background:var(--color-primary-light);color:var(--color-primary-text)">CapCut</span>
+            <span class="mc-tool"
+              style="background:var(--color-primary-light);color:var(--color-primary-text)">DaVinci</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Content & Language Wing -->
+      <div class="mc-wing-label">Content & Language Wing</div>
+      <div class="mc-grid">
+
+        <div class="mc-card" style="border-left-color:var(--color-success)">
+          <div class="mc-icon">✍️</div>
+          <div class="mc-num">04</div>
+          <div class="mc-name">News Writing & Journalism</div>
+          <div class="mc-desc">Press releases, event reports, scout news articles, and website blog content. Covering
+            SLSA activities for national media and official channels.</div>
+          <div class="mc-tools">
+            <span class="mc-tool" style="background:var(--color-success-light);color:var(--color-success-text)">Google
+              Docs</span>
+            <span class="mc-tool"
+              style="background:var(--color-success-light);color:var(--color-success-text)">WordPress</span>
+          </div>
+        </div>
+
+        <div class="mc-card" style="border-left-color:var(--color-success)">
+          <div class="mc-icon">📝</div>
+          <div class="mc-num">05</div>
+          <div class="mc-name">Script Writing</div>
+          <div class="mc-desc">Video scripts, voiceover narration, interview question writing, social media announcement
+            drafts, and campaign messaging for all platforms.</div>
+          <div class="mc-tools">
+            <span class="mc-tool" style="background:var(--color-success-light);color:var(--color-success-text)">Google
+              Docs</span>
+            <span class="mc-tool"
+              style="background:var(--color-success-light);color:var(--color-success-text)">Notion</span>
+          </div>
+        </div>
+
+        <div class="mc-card" style="border-left-color:var(--color-success)">
+          <div class="mc-icon">🌐</div>
+          <div class="mc-num">06</div>
+          <div class="mc-name">Translation & Trilingual Content</div>
+          <div class="mc-desc">Translating all key content between Sinhala, Tamil, and English to ensure island-wide
+            reach across every community and province.</div>
+          <div class="mc-tools">
+            <span class="mc-tool"
+              style="background:var(--color-success-light);color:var(--color-success-text)">Sinhala</span>
+            <span class="mc-tool"
+              style="background:var(--color-success-light);color:var(--color-success-text)">Tamil</span>
+            <span class="mc-tool"
+              style="background:var(--color-success-light);color:var(--color-success-text)">English</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social & Digital Wing -->
+      <div class="mc-wing-label">Social & Digital Wing</div>
+      <div class="mc-grid">
+
+        <div class="mc-card" style="border-left-color:var(--color-warning)">
+          <div class="mc-icon">📱</div>
+          <div class="mc-num">07</div>
+          <div class="mc-name">Social Media Content Creation</div>
+          <div class="mc-desc">Captions, posts, stories, Reels scripts, trend adoption, and hashtag strategy across
+            Facebook, Instagram, TikTok, and YouTube.</div>
+          <div class="mc-tools">
+            <span class="mc-tool" style="background:var(--color-warning-light);color:var(--color-warning-text)">Meta
+              Suite</span>
+            <span class="mc-tool"
+              style="background:var(--color-warning-light);color:var(--color-warning-text)">Canva</span>
+            <span class="mc-tool"
+              style="background:var(--color-warning-light);color:var(--color-warning-text)">Buffer</span>
+          </div>
+        </div>
+
+        <div class="mc-card" style="border-left-color:var(--color-warning)">
+          <div class="mc-icon">📊</div>
+          <div class="mc-num">08</div>
+          <div class="mc-name">Digital Marketing & Analytics</div>
+          <div class="mc-desc">Follower growth strategies, post scheduling, engagement analytics, and monthly
+            performance reporting across all official SLSA platforms.</div>
+          <div class="mc-tools">
+            <span class="mc-tool" style="background:var(--color-warning-light);color:var(--color-warning-text)">Meta
+              Suite</span>
+            <span class="mc-tool"
+              style="background:var(--color-warning-light);color:var(--color-warning-text)">Analytics</span>
+          </div>
+        </div>
+
+        <div class="mc-card" style="border-left-color:var(--color-warning)">
+          <div class="mc-icon">💬</div>
+          <div class="mc-num">09</div>
+          <div class="mc-name">WhatsApp Channel Management</div>
+          <div class="mc-desc">Broadcasting event updates, managing the official SLSA WhatsApp Channel, and coordinating
+            communication between national and district teams.</div>
+          <div class="mc-tools">
+            <span class="mc-tool"
+              style="background:var(--color-warning-light);color:var(--color-warning-text)">WhatsApp</span>
+            <span class="mc-tool"
+              style="background:var(--color-warning-light);color:var(--color-warning-text)">Broadcasting</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Design & Technical Wing -->
+      <div class="mc-wing-label">Design & Technical Wing</div>
+      <div class="mc-grid">
+
+        <div class="mc-card" style="border-left-color:var(--color-danger)">
+          <div class="mc-icon">🎨</div>
+          <div class="mc-num">10</div>
+          <div class="mc-name">Graphic Design</div>
+          <div class="mc-desc">Event posters, banners, infographics, social media templates, and SLSA brand assets.
+            Maintaining visual consistency across all national platforms.</div>
+          <div class="mc-tools">
+            <span class="mc-tool"
+              style="background:var(--color-danger-light);color:var(--color-danger-text)">Canva</span>
+            <span class="mc-tool"
+              style="background:var(--color-danger-light);color:var(--color-danger-text)">Photoshop</span>
+            <span class="mc-tool"
+              style="background:var(--color-danger-light);color:var(--color-danger-text)">Figma</span>
+          </div>
+        </div>
+
+        <div class="mc-card" style="border-left-color:var(--color-danger)">
+          <div class="mc-icon">📡</div>
+          <div class="mc-num">11</div>
+          <div class="mc-name">Live Streaming</div>
+          <div class="mc-desc">Technical setup and management of live broadcasts for major national events via YouTube
+            Live, Facebook Live, and professional streaming platforms.</div>
+          <div class="mc-tools">
+            <span class="mc-tool" style="background:var(--color-danger-light);color:var(--color-danger-text)">OBS</span>
+            <span class="mc-tool"
+              style="background:var(--color-danger-light);color:var(--color-danger-text)">StreamYard</span>
+            <span class="mc-tool" style="background:var(--color-danger-light);color:var(--color-danger-text)">YouTube
+              Live</span>
+          </div>
+        </div>
+
+        <div class="mc-card" style="border-left-color:var(--color-danger)">
+          <div class="mc-icon">🚁</div>
+          <div class="mc-num">12</div>
+          <div class="mc-name">Drone Operation</div>
+          <div class="mc-desc">Aerial photography and videography at camps, hikes, and major national events.
+            Responsible operation in compliance with CAA Sri Lanka regulations.</div>
+          <div class="mc-tools">
+            <span class="mc-tool" style="background:var(--color-danger-light);color:var(--color-danger-text)">DJI</span>
+            <span class="mc-tool"
+              style="background:var(--color-danger-light);color:var(--color-danger-text)">Autel</span>
+            <span class="mc-tool" style="background:var(--color-danger-light);color:var(--color-danger-text)">CAA
+              Compliant</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
   <!-- Put this right below your last panel (<div id="p3" class="panel">...</div>) -->
