@@ -1,656 +1,1091 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SLSA Media & Outreach — Strategic Report</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="app-container">
-  
-  <div class="hdr">
-    <div class="hdr-meta">
-      <div class="hdr-avatar">SC</div>
-      <div>
-        <h1 class="hdr-title">SLSA Media & Outreach — Strategic Report</h1>
-        <div class="hdr-sub">Sri Lanka Scout Association · Analysis by Lochana Karunarathna</div>
+  <div class="app-container">
+
+    <div class="hdr">
+      <div class="hdr-meta">
+        <div class="hdr-avatar">SC</div>
+        <div>
+          <h1 class="hdr-title">SLSA Media & Outreach — Strategic Report</h1>
+          <div class="hdr-sub">Sri Lanka Scout Association · Analysis by Lochana Karunarathna</div>
+        </div>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+          🌙
+        </button>
       </div>
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
-        🌙
-      </button>
+
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-val">110K+</div>
+          <div class="stat-lbl">SLSA members</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">8.2M</div>
+          <div class="stat-lbl">Sri Lanka social users</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">16</div>
+          <div class="stat-lbl">Recommendations</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">7</div>
+          <div class="stat-lbl">Suggestions</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">2024</div>
+          <div class="stat-lbl">WOSM Brand Year</div>
+        </div>
+      </div>
     </div>
-    
-    <div class="stat-grid">
-      <div class="stat"><div class="stat-val">110K+</div><div class="stat-lbl">SLSA members</div></div>
-      <div class="stat"><div class="stat-val">8.2M</div><div class="stat-lbl">Sri Lanka social users</div></div>
-      <div class="stat"><div class="stat-val">16</div><div class="stat-lbl">Recommendations</div></div>
-      <div class="stat"><div class="stat-val">7</div><div class="stat-lbl">Suggestions</div></div>
-      <div class="stat"><div class="stat-val">2024</div><div class="stat-lbl">WOSM Brand Year</div></div>
+
+    <div class="tab-bar">
+      <button class="tab active" onclick="showPanel('p1', this)">PDF Recommendations</button>
+      <button class="tab" onclick="showPanel('p2', this)">Additional Suggestions</button>
+      <button class="tab" onclick="showPanel('p3', this)">Strategic Timeline</button>
+      <button class="tab" onclick="showPanel('p4',this)">Committee Hierarchy</button>
     </div>
+
+    <div id="p1" class="panel active">
+      <p class="panel-intro">Click any recommendation to expand the expert analysis and step-by-step action plan.</p>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r1')">
+          <span class="rec-num">01</span>
+          <span class="rec-title">National Youth Media Team</span>
+          <span class="badge b-high">Critical</span>
+          <span class="toggle-icon" id="r1-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r1">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">This is the <strong>most important structural reform</strong> in the entire
+            document. Without a functioning youth media team representing all three language mediums (Sinhala, Tamil,
+            English), every other recommendation remains a vision on paper. Globally, scout associations like BSA (USA)
+            and Scouts UK operate dedicated youth communications units with clear mandates and mentorship pipelines.
+            SLSA must do the same.</div>
+          <div class="global-box"><strong>Global benchmark:</strong> Scouts Australia's National Youth Council has a
+            dedicated media sub-team with members aged 14–25. They produce 80% of social media content. Result: 3×
+            engagement increase in 2 years.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Draft a formal Terms of Reference (ToR) for the National Youth Media Team with roles: Team Lead, Sinhala
+              Editor, Tamil Editor, English Editor, Videographer, Graphic Designer.</li>
+            <li>Conduct an island-wide open call for scouts (Cub → Rover) with media skills — photography, video
+              editing, graphic design, copywriting — across all districts.</li>
+            <li>Shortlist 10–15 members ensuring representation from all 3 language mediums and all provinces.</li>
+            <li>Assign a senior Scout Leader as a mentor/advisor with a monthly briefing schedule.</li>
+            <li>Create a shared Google Workspace or Microsoft Teams environment for collaboration.</li>
+            <li>Hold a 2-day residential training camp combining media skills + scouting values before official launch.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r2')">
+          <span class="rec-num">02</span>
+          <span class="rec-title">Official YouTube Channel</span>
+          <span class="badge b-high">Critical</span>
+          <span class="toggle-icon" id="r2-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r2">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">YouTube is the <strong>second-most visited website in Sri Lanka</strong>, and
+            YouTube Shorts is projected to dominate brand promotion in Sri Lanka through 2026. A scout songs, crafts,
+            and yells channel is an excellent entry point because this content is timeless, searchable, and
+            family-friendly. AI-assisted production (auto-captioning, translation, background removal) can significantly
+            reduce production costs.</div>
+          <div class="global-box"><strong>Global benchmark:</strong> World Scouting's official YouTube has 185K+
+            subscribers with content in 12 languages. Their "Scout Skills" playlist alone has 2M+ views — proof that
+            evergreen skills content drives traffic.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Register the channel as "Sri Lanka Scouts Official" — secure the handle immediately to prevent
+              squatting.</li>
+            <li>Create 3 playlists to start: Scout Songs, Scout Skills & Crafts, Scout Yells & Cheers.</li>
+            <li>Film the first 5 videos with a volunteer film crew at a district event — a song performed by cubs, a
+              knot-tying tutorial, a campfire yell.</li>
+            <li>Use free AI tools (CapCut, DaVinci Resolve, auto-captions) to polish videos before upload.</li>
+            <li>Upload consistently: 1 video per week minimum. Use Shorts (under 60 seconds) for quick skill demos.</li>
+            <li>Add Sinhala, Tamil, and English auto-subtitles for all videos — YouTube provides this free.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r3')">
+          <span class="rec-num">03</span>
+          <span class="rec-title">Social Media Reach — Reels & Short Video</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r3-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r3">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Short-form video is not optional — it is the dominant content format for Sri
+            Lankan youth in 2026. Research shows TikTok has the highest engagement rate globally at 3.73%, far ahead of
+            other platforms. Instagram Reels reach non-followers, making them the best tool for growth. SLSA should
+            target 3–5 Reels per week, not per month.</div>
+          <div class="global-box"><strong>Global benchmark:</strong> Scouts New Zealand grew from 8K to 47K Instagram
+            followers in 18 months by posting daily Reels of camp activities, badge challenges, and behind-the-scenes
+            scout life content.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Establish a content calendar with 4 content pillars: Scout Skills, Behind the Scenes, Scout Stories
+              (member spotlight), Event Highlights.</li>
+            <li>Film Reels at every district and national event — assign a youth media member to each event specifically
+              for Reels capture.</li>
+            <li>Post 3 Reels per week on both Facebook and Instagram. Use the same vertical video across both platforms.
+            </li>
+            <li>Add Sinhala and Tamil captions using free tools like CapCut to maximize local reach.</li>
+            <li>Use trending audio in Reels — check Instagram's audio trending section weekly and apply to scout
+              content.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r4')">
+          <span class="rec-num">04</span>
+          <span class="rec-title">Media Quality Standards</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r4-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r4">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Inconsistent visual branding destroys credibility. Every image or video shared
+            without proper logos and watermarks makes SLSA look amateur. A single, downloadable "Brand Kit" must be
+            created and distributed to all district media reps. This is standard practice in all credible scouting
+            organizations and aligns with WOSM's 2024 refreshed brand guidelines.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Create a free SLSA Canva Team account — upload official logos, color codes (#), and approved fonts as
+              brand assets accessible to all districts.</li>
+            <li>Design 3–5 standard post templates: Event Announcement, Achievement Highlight, Quote Card, Event Recap.
+            </li>
+            <li>Publish a 1-page "SLSA Social Media Standards" PDF — watermark placement, logo size rules, image
+              resolution minimum (1080×1080px for posts, 1080×1920px for Stories/Reels).</li>
+            <li>Mandate that all official accounts use these templates before posting.</li>
+            <li>Conduct a quarterly "content audit" — review recent posts from all district accounts for standards
+              compliance.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r5')">
+          <span class="rec-num">05</span>
+          <span class="rec-title">Production Quality — District Resources</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r5-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r5">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Districts have untapped talent — scouts with DSLR cameras, video editing software,
+            and even drone licenses. A resource mapping exercise will reveal what already exists. The challenge is
+            coordination, not resources. A "District Media Resource Registry" connecting skilled scouts to
+            national-level projects will transform production quality without additional cost.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Send a skills survey to all district commissioners — ask scouts to self-identify as: photographer,
+              videographer, video editor, graphic designer, drone operator.</li>
+            <li>Create a shared national registry (Google Sheet or Notion) listing available equipment and skills by
+              district.</li>
+            <li>Organize a "Media Skills Day" — a half-day workshop at each district event where scouts teach each other
+              photography/video basics.</li>
+            <li>Nominate a "District Media Officer" in each district to coordinate production and maintain equipment
+              standards.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r6')">
+          <span class="rec-num">06</span>
+          <span class="rec-title">WOSM Logo Usage — URGENT</span>
+          <span class="badge b-high">Critical</span>
+          <span class="toggle-icon" id="r6-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r6">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block"><strong>This is time-sensitive.</strong> WOSM officially refreshed its brand and
+            visual identity in May 2024 — a completely redesigned World Scout Emblem with updated logo and wordmark was
+            approved by the World Scout Committee. Many SLSA districts are still using the old logo, which is now
+            outdated. WOSM also provides a free "Brand Centre" with downloadable assets at learn.scout.org. Immediate
+            action is needed.</div>
+          <div class="global-box"><strong>WOSM Update:</strong> The new World Scouting brand was approved in May 2024
+            with a "bold, modern, youthful, and digital" identity specifically designed for social media use. SLSA must
+            communicate this to all districts immediately.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Download the updated WOSM brand assets from the official WOSM Brand Centre:
+              <strong>learn.scout.org</strong> → "World Scouting Brand Centre".
+            </li>
+            <li>Issue an official circular from the Chief Commissioner to all districts — attach the updated logo files
+              in PNG, SVG, and JPG formats.</li>
+            <li>Conduct a 1-hour online awareness webinar specifically on logo usage rules — record it and share via
+              WhatsApp and email.</li>
+            <li>Remove all outdated logos from official digital accounts within 30 days of the circular.</li>
+            <li>Add a "Logo Compliance Check" to the annual district review process.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r7')">
+          <span class="rec-num">07</span>
+          <span class="rec-title">SLSA Logo Usage Guidelines</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r7-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r7">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Without written guidelines, scouts will continue using the SLSA logo on unofficial
+            merchandise, personal posts, and non-approved materials — diluting brand identity. A simple, illustrated
+            2-page guideline document is sufficient. Model it after WOSM's Brand Manual available on the Scout Learning
+            Zone.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Draft a 2-page "SLSA Logo Usage Guide" covering: approved colors, minimum sizes, clear space rules, and
+              prohibited uses (stretching, recoloring, adding effects).</li>
+            <li>Translate into all three languages — Sinhala, Tamil, English.</li>
+            <li>Distribute via email, WhatsApp, and pin on the official SLSA website and social media profiles.</li>
+            <li>Create a simple "Do and Don't" visual graphic — easy for young scouts to understand.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r8')">
+          <span class="rec-num">08</span>
+          <span class="rec-title">WhatsApp Channel</span>
+          <span class="badge b-high">Critical</span>
+          <span class="toggle-icon" id="r8-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r8">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">WhatsApp is used by the vast majority of Sri Lankan youth and their parents. A
+            WhatsApp Channel (one-way broadcast, not a group) is ideal for SLSA — it allows instant, direct
+            communication to thousands of followers without spam concerns. This is fundamentally different from WhatsApp
+            groups and does not expose member phone numbers. Research confirms Facebook, WhatsApp, and YouTube are the
+            top 3 platforms among Sri Lankan youth.</div>
+          <div class="global-box"><strong>Sri Lanka context:</strong> Facebook dominates with ~7 million users, but
+            WhatsApp is used for daily communication — especially for school-aged youth coordinating within scout
+            groups. A Channel reaches them where they already are.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Create the official "SLSA Updates" WhatsApp Channel from the national HQ account.</li>
+            <li>Share the Channel link in all existing WhatsApp scout groups — district groups, leader groups, parent
+              groups.</li>
+            <li>Post on all social media platforms asking members to subscribe: "Follow our WhatsApp Channel for instant
+              event updates."</li>
+            <li>Assign a dedicated Channel Manager (from the youth media team) to post updates 3–5 times per week.</li>
+            <li>Content types: Event reminders, registration deadlines, weather updates for camps, quick photo
+              highlights, badge achievement announcements.</li>
+            <li>Also create district-level WhatsApp Channels linked to the national one for local news.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r9')">
+          <span class="rec-num">09</span>
+          <span class="rec-title">Scout Profile — The Scarf Identity</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r9-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r9">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">The scout scarf (necker) is one of the most recognizable symbols of scouting
+            worldwide. When scouts appear in public without it, a major visibility opportunity is missed. This is not
+            about discipline — it is about <strong>pride and identity</strong>. The solution is positive reinforcement
+            and clear, practical guidance on when the scarf must be worn, using cheerful, youth-friendly communication
+            rather than top-down instructions.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Issue a simple "When to wear your scarf" illustrated guide — include: all official scout events, public
+              service activities, travel to/from events, national days.</li>
+            <li>Start a social media campaign: <strong>#ProudToBeAScout</strong> — encourage scouts to post photos in
+              full uniform including scarf, tagging SLSA.</li>
+            <li>Recognize and spotlight scouts who consistently maintain proper uniform on the SLSA social media pages.
+            </li>
+            <li>At every award ceremony, explicitly acknowledge correct uniform wearing as part of scout excellence.
+            </li>
+            <li>Distribute a pocket-card reminder to all scouts at the start of each scouting year listing uniform
+              requirements.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r10')">
+          <span class="rec-num">10</span>
+          <span class="rec-title">Scout Profile — Public Awareness Events</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r10-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r10">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Scout Service Month and Scout Week are globally recognized scouting milestones
+            that SLSA consistently underutilizes. The strategy proposed — social media content + Chief Commissioner
+            interviews + community feedback — is correct and comprehensive. The missing ingredient is a centralized,
+            coordinated content calendar pushed to all districts simultaneously, not ad-hoc posts.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Mark Scout Service Month and Scout Week on a national SLSA content calendar shared with all districts 60
+              days in advance.</li>
+            <li>Film a 3–5 minute video interview with the Chief Commissioner and ADC Programme to be released on the
+              first day of Scout Week.</li>
+            <li>Create a "30 Days of Scouting Impact" Instagram/Facebook campaign during Scout Service Month — one post
+              daily highlighting a different service project.</li>
+            <li>Collect short video testimonials from community beneficiaries of scout projects — these are the most
+              powerful content type for public awareness.</li>
+            <li>Send a press kit to Sri Lankan national media (Rupavahini, ITN, Hiru, Daily News) before Scout Week with
+              key facts and interview requests.</li>
+            <li>Collaborate with the Ministry of Education to issue a school circular recognizing Scout Week activities.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r11')">
+          <span class="rec-num">11</span>
+          <span class="rec-title">Social Media Trends — Modern Content</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r11-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r11">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Global scouting content that goes viral shares common traits: authentic scout
+            moments (not staged), outdoor adventure footage, skill demonstrations, and day-in-the-life formats. Camp and
+            hike content performs exceptionally well because it showcases what non-scouts wish they could do. The
+            "adventure and skill" identity of scouting is a natural fit for trending content formats — SLSA simply needs
+            to capture and package it correctly.</div>
+          <div class="global-box"><strong>Global trend:</strong> "Day in the life at scout camp" format videos
+            consistently receive 5–10× more engagement than official announcement posts. Authenticity beats production
+            value every time for youth audiences.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>At every camp and hike, assign a "Content Scout" responsible for capturing candid, authentic moments —
+              not just posed group photos.</li>
+            <li>Create a "Scout Challenge" series — short Reels where scouts demonstrate a skill (fire lighting, first
+              aid, tent pitching) and challenge others to try.</li>
+            <li>Use trending audio from Instagram/TikTok — check the "Trending" audio section weekly and overlay
+              camp/hike footage.</li>
+            <li>Post "Before/After" transformation Reels — "Before scout training vs. After" — these are highly
+              shareable.</li>
+            <li>Follow global scout accounts (World Scouting, Scouts UK, BSA, Scouts Australia) and adapt their trending
+              content formats to a Sri Lankan context.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r12')">
+          <span class="rec-num">12</span>
+          <span class="rec-title">Youth Media Appointments</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r12-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r12">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Youth involvement in decision-making is a core pillar of WOSM's Strategy for
+            Scouting. WOSM explicitly emphasizes youth leadership and youth involvement across all levels. Appointing
+            youth to formal roles like Assistant District Commissioner (ADC) for Media creates accountability,
+            mentorship opportunities, and real leadership development — which is ultimately what scouting is about.
+          </div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Create a formal "ADC Media (Youth)" designation within the district commissioner structure — open only
+              to scouts aged 18–25.</li>
+            <li>Advertise these positions openly at district level with clear selection criteria: media skills +
+              scouting record + language proficiency.</li>
+            <li>Pair each ADC Media Youth with an experienced adult ADC Media as a mentor for the first year.</li>
+            <li>Include youth ADC Media members in all national media committee meetings with full voting rights.</li>
+            <li>Recognize these appointments publicly via social media and at annual award ceremonies.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r13')">
+          <span class="rec-num">13</span>
+          <span class="rec-title">Youth Representation at District Meetings</span>
+          <span class="badge b-low">Medium</span>
+          <span class="toggle-icon" id="r13-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r13">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Allowing 2 sub-committee youth representatives to attend ADC Media meetings is a
+            practical, low-cost reform with high impact on communication and alignment. District-level challenges are
+            invisible to the national sub-committee unless there is a structured feedback channel. This creates one.
+          </div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Formally amend the ADC Media meeting agenda to include a standing "Youth Report" agenda item (10
+              minutes) presented by the 2 youth reps.</li>
+            <li>Rotate the 2 youth representative positions every 6 months to expose more youth to district-level
+              governance.</li>
+            <li>Have youth reps submit a 1-page written summary after each meeting to the national sub-committee chair.
+            </li>
+            <li>Create a shared WhatsApp group connecting all district youth media reps with the national sub-committee
+              for ongoing communication.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r14')">
+          <span class="rec-num">14</span>
+          <span class="rec-title">Commemorative Social Media Content</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r14-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r14">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Scarf Day, F.G. Stevenson Day, Nature Day, World Scout Day, Thinking Day — all of
+            these represent zero-cost content opportunities that SLSA is missing. A simple annual commemorative content
+            calendar, pre-scheduled 3 months in advance, would ensure no important date is missed. This builds brand
+            identity and gives the audience regular reasons to engage.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Create a comprehensive "SLSA Annual Commemorative Content Calendar" listing every relevant day with:
+              post theme, suggested visual concept, and platform.</li>
+            <li>Pre-design template posts for each commemorative day — so they can be posted with minimal last-minute
+              effort.</li>
+            <li>For major dates (World Scout Day, Scarf Day), prepare 3 content pieces: 1 static post, 1 Reel, 1
+              WhatsApp Channel announcement.</li>
+            <li>Add lesser-known but meaningful days: International Youth Day (12 Aug), World Environment Day (5 Jun,
+              tied to nature activities).</li>
+            <li>Schedule posts using Meta Business Suite to ensure they go live at optimal times even if the team is
+              offline.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r15')">
+          <span class="rec-num">15</span>
+          <span class="rec-title">TikTok Channel</span>
+          <span class="badge b-med">High</span>
+          <span class="toggle-icon" id="r15-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r15">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">TikTok has the highest engagement rate of any social platform (3.73% average). Sri
+            Lankan youth heavily use TikTok. Creating a TikTok account is free and scout content — outdoor skills, camp
+            moments, team challenges — is perfectly suited to the platform. The content produced for Reels can be
+            directly repurposed for TikTok with minimal editing. One strategy, multiple platforms.</div>
+          <div class="global-box"><strong>Strategic note:</strong> When India banned TikTok in 2020, users migrated
+            instantly to Instagram Reels and YouTube Shorts. Build TikTok but also cross-post to Reels and Shorts
+            simultaneously — this protects against platform risk.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Register @SriLankaScouts on TikTok immediately — verify the account as an official organization.</li>
+            <li>Repurpose existing Reels content onto TikTok with minor format adjustments (add TikTok-native text,
+              sounds).</li>
+            <li>Launch with a "7-Day Scout Challenge" — post one TikTok per day for a week showcasing different scout
+              skills to rapidly gain early followers.</li>
+            <li>Use trending TikTok sounds and challenges as frameworks — overlay scout footage onto viral
+              audio/formats.</li>
+            <li>Engage with comments actively in the first 90 days — the TikTok algorithm rewards early engagement
+              response.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-head" onclick="toggle('r16')">
+          <span class="rec-num">16</span>
+          <span class="rec-title">Increasing Social Media Followers</span>
+          <span class="badge b-low">Medium</span>
+          <span class="toggle-icon" id="r16-icon">▾</span>
+        </div>
+        <div class="rec-body" id="r16">
+          <div class="section-label">Expert Analysis</div>
+          <div class="analysis-block">Follower count is a lagging indicator — it grows when content quality and
+            consistency are in place. Competitions are a proven growth tactic, but the most sustainable growth comes
+            from consistently posting content that non-scouts want to share. "Tag a friend who needs scouting" posts,
+            shareable skill tips, and emotionally resonant community service content drive organic growth better than
+            giveaways alone.</div>
+          <div class="section-label">Step-by-Step Actions</div>
+          <ol class="step-list">
+            <li>Run a quarterly "Scout Photo Challenge" — members submit their best scout photo with a hashtag. Top 3
+              are featured on the official page. This is organic follower growth.</li>
+            <li>Post "Did You Know? Scouting in Sri Lanka" facts 2× per week — these are highly shareable and attract
+              new followers.</li>
+            <li>Collaborate with popular Sri Lankan youth influencers or content creators to visit a scout camp and post
+              about it — this exposes SLSA to hundreds of thousands of new followers.</li>
+            <li>Ask current followers to "share this page with one friend who has a child interested in scouting" —
+              direct calls to action work.</li>
+            <li>Run a referral campaign: "The school group that gets the most new followers to our page wins a trophy at
+              the National Jamboree" — this enlists every scout as a follower recruiter.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div id="p2" class="panel">
+      <p class="panel-intro">Based on the Research and current global best practices, these are additional
+        recommendations not covered in the submitted PDF.</p>
+
+      <div class="addl-card">
+        <h3><span class="badge b-high">A</span> Trilingual Content Strategy — The Missing Gap</h3>
+        <p>The PDF mentions language mediums but never addresses a <strong>structured trilingual content
+            strategy</strong>. SLSA has scouts across Sinhala, Tamil, and English communities, but nearly all visible
+          social content is in Sinhala only. This alienates Tamil-speaking scouts and their families — a missed
+          recruitment and retention opportunity. Every major post should be translated or at minimum captioned in all 3
+          languages. This alone could significantly increase membership in Northern and Eastern provinces.</p>
+      </div>
+
+      <div class="addl-card">
+        <h3><span class="badge b-high">B</span> Scout Alumni Network — Untapped Resource</h3>
+        <p>Sri Lanka has thousands of former scouts, many now in prominent professional roles. None of the 16
+          recommendations mention engaging scout alumni. A <strong>"Once a Scout, Always a Scout" digital alumni
+            campaign</strong> — inviting prominent alumni to share their scouting story on social media — would generate
+          massive authentic content and inspire current youth. SLSA should create an Alumni LinkedIn group and feature
+          one "Scout Alumni Spotlight" per month.</p>
+      </div>
+
+      <div class="addl-card">
+        <h3><span class="badge b-med">C</span> Content Management System — Operational Infrastructure</h3>
+        <p>Currently there is no centralized tool for scheduling, approving, and tracking social media posts across
+          districts. SLSA needs a free tool like <strong>Buffer or Meta Business Suite</strong> to schedule content in
+          advance, assign approval workflows, and track analytics. Without this, the YouTube channel, TikTok, Instagram,
+          Facebook, and WhatsApp Channel will become chaotic — managed by different individuals with no coordination.
+        </p>
+      </div>
+
+      <div class="addl-card">
+        <h3><span class="badge b-med">D</span> Annual SLSA Media Awards</h3>
+        <p>Recognition drives behavior. Create an <strong>"SLSA Annual Media Excellence Award"</strong> with categories:
+          Best Photo, Best Short Video, Best Social Media Post, Best Event Coverage, Most Improved District Media Team.
+          Award at the Annual Scout Conference. This costs nothing but motivates every district media team to produce
+          high-quality content throughout the year — because they are competing for recognition.</p>
+      </div>
+
+      <div class="addl-card">
+        <h3><span class="badge b-med">E</span> School & Parent Outreach — Direct to Decision Makers</h3>
+        <p>In Sri Lanka, a child joins scouts because a parent or teacher encouraged it. None of the 16 recommendations
+          address <strong>parent and teacher communication</strong>. A dedicated "Parents of Scouts" WhatsApp Channel
+          and quarterly newsletter explaining what their children learned — leadership skills, first aid, teamwork —
+          would significantly boost enrollment and retention. Parents who feel informed become the most effective
+          recruiters for new scouts.</p>
+      </div>
+
+      <div class="addl-card">
+        <h3><span class="badge b-low">F</span> Partnerships with Sri Lankan Media — Earned Media</h3>
+        <p>Earned media (free news coverage) is far more credible than any social media post. SLSA should build formal
+          relationships with Sri Lankan television channels and newspapers. Propose a <strong>monthly "Scout Spotlight"
+            segment</strong> on a national channel — showcasing a district's community service project. This costs
+          nothing but time and dramatically increases public visibility beyond SLSA's current follower base.</p>
+      </div>
+
+      <div class="addl-card">
+        <h3><span class="badge b-low">G</span> SLSA Website as a Media Hub</h3>
+        <p>The scout.lk website is currently a repository, not a media hub. Adding a <strong>Photo & Video Gallery, a
+            Scout Stories blog, a Press section with downloadable media kits, and an embedded YouTube/social
+            feed</strong> would transform it into a destination that generates credibility, supports recruitment, and
+          provides journalists with easy access to SLSA information. A strong website also improves Google search
+          visibility for "scouts Sri Lanka" queries.</p>
+      </div>
+    </div>
+
+    <div id="p3" class="panel">
+      <p class="panel-intro">A phased implementation roadmap based on urgency, resource requirements, and expected
+        impact.</p>
+
+      <!-- HEADER -->
+      <div class="tl-header">
+        <div class="tl-header-top">
+          <div>
+            <div class="tl-main-title">Scouting Profile & Outreach Committee</div>
+            <div class="tl-main-sub">Strategic Timeline & Action Plan &nbsp;·&nbsp; June – December 2026</div>
+          </div>
+          <div class="tl-period-badge">Jun – Dec 2026</div>
+        </div>
+        <div class="tl-objective"><strong>Committee Objective:</strong> To establish a powerful visual identity, build a
+          robust communication framework, and structure dedicated operational teams. This timeline guides the rollout of
+          youth-led media teams and District ADC outreach, building momentum through the 3rd Kidoree and culminating in
+          the National Awarding Ceremony Awareness Campaign.</div>
+        <div class="tl-crit-note">
+          <span class="tl-crit-icon">⚠</span>
+          <span>Key final deadline for Youth Media Team mobilization is <strong>September 12, 2026</strong> — must be
+            fully operational ahead of the 3rd Kidoree.</span>
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="tl-body">
+
+        <!-- Phase 1 -->
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--color-warning)"></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <div class="tl-phase-tag" style="color:var(--color-warning-text)">Phase 1</div>
+                <div class="tl-phase-title">Open Call Preparation & Circulars</div>
+              </div>
+              <div class="tl-card-meta">
+                <div class="tl-date">Jun 06 – Jun 12</div>
+                <div class="tl-status" style="background:var(--color-warning-light);color:var(--color-warning-text)">
+                  Drafting Stage</div>
+              </div>
+            </div>
+            <ul class="tl-list">
+              <li>Draft official NHQ Circular for the Open Call of the Youth Media Team</li>
+              <li>Draft official NHQ Circular for District-wise ADC Team — highlight the Mechanism</li>
+              <li>Secure National Commissioner approval & prepare electronic distribution channels</li>
+            </ul>
+            <div class="tl-resp">Committee Secretary</div>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--color-text-muted)"></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <div class="tl-phase-tag" style="color:var(--color-text-muted)">Phase 2</div>
+                <div class="tl-phase-title">Foundations & Social Media Setup</div>
+              </div>
+              <div class="tl-card-meta">
+                <div class="tl-date">Jun 12 onwards</div>
+                <div class="tl-status"
+                  style="background:var(--color-bg-surface);color:var(--color-text-muted);border:0.5px solid var(--color-border)">
+                  Pending / Draft</div>
+              </div>
+            </div>
+            <ul class="tl-list">
+              <li>Define brand guidelines, official color palettes, and tone for Scouting Profile & Outreach</li>
+              <li>Create official social media handles — Facebook, Instagram, LinkedIn, TikTok, YouTube</li>
+              <li>Design uniform cover photos, profile pictures, and launch templates</li>
+            </ul>
+            <div class="tl-resp">Digital Media Lead</div>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--color-primary)"></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <div class="tl-phase-tag" style="color:var(--color-primary-text)">Phase 3</div>
+                <div class="tl-phase-title">Campaign Launch & Applications</div>
+              </div>
+              <div class="tl-card-meta">
+                <div class="tl-date">Jun 12 – Jun 26</div>
+                <div class="tl-status" style="background:var(--color-primary-light);color:var(--color-primary-text)">
+                  Planned</div>
+              </div>
+            </div>
+            <ul class="tl-list">
+              <li>Publish 'Open Call' graphic assets and announcement videos across social channels</li>
+              <li>Formally dispatch Circulars to all Districts regarding Youth Media & ADC structures</li>
+              <li>Launch online application portals (Google Forms) for interested scouts</li>
+            </ul>
+            <div class="tl-resp">Outreach Team</div>
+          </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--color-primary)"></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <div class="tl-phase-tag" style="color:var(--color-primary-text)">Phase 4</div>
+                <div class="tl-phase-title">Review, Selection & Interviews</div>
+              </div>
+              <div class="tl-card-meta">
+                <div class="tl-date">Jul 1st week – Aug last week</div>
+                <div class="tl-status" style="background:var(--color-primary-light);color:var(--color-primary-text)">
+                  Planned</div>
+              </div>
+            </div>
+            <ul class="tl-list">
+              <li>Filter submissions and evaluate portfolios — Photography, Writing, Video Editing</li>
+              <li>Conduct virtual interviews/briefings for shortlisted Youth Media & District ADC candidates</li>
+              <li>Finalize the official roster for the media and outreach wings</li>
+              <li>Issue appointment letters</li>
+            </ul>
+            <div class="tl-resp">Full Committee</div>
+          </div>
+        </div>
+
+        <!-- CRITICAL DEADLINE -->
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--color-danger);box-shadow:0 0 0 3px var(--color-danger-light)">
+          </div>
+          <div class="tl-card tl-card-critical">
+            <div class="tl-card-top">
+              <div>
+                <div class="tl-phase-tag" style="color:var(--color-danger-text)">⚠ Critical Deadline</div>
+                <div class="tl-phase-title" style="color:var(--color-danger-text)">Youth Media Team — Fully Active</div>
+              </div>
+              <div class="tl-card-meta">
+                <div class="tl-date" style="color:var(--color-danger-text);font-weight:700">September 12</div>
+                <div class="tl-status" style="background:var(--color-danger);color:#fff">Hard Target</div>
+              </div>
+            </div>
+            <ul class="tl-list">
+              <li>Official appointment & structural formulation of the Youth Media Team</li>
+              <li>Mandatory onboarding and strategy alignment workshop</li>
+              <li>Deployment readiness check — must be fully operational to cover the 3rd Kidoree</li>
+            </ul>
+            <div class="tl-resp" style="color:var(--color-danger-text)">Committee Chair</div>
+          </div>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--color-success)"></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <div class="tl-phase-tag" style="color:var(--color-success-text)">Phase 5</div>
+                <div class="tl-phase-title">3rd Kidoree — Coverage & Operation</div>
+              </div>
+              <div class="tl-card-meta">
+                <div class="tl-date">September (Event Dates)</div>
+                <div class="tl-status" style="background:var(--color-success-light);color:var(--color-success-text)">
+                  Planned</div>
+              </div>
+            </div>
+            <ul class="tl-list">
+              <li>First live deployment of the newly formed Youth Media Team</li>
+              <li>Execute on-ground photography, videography, interviews, and real-time social updates</li>
+              <li>Measure reach and archive visual assets for official Scouting records</li>
+            </ul>
+            <div class="tl-resp">Youth Media Team</div>
+          </div>
+        </div>
+
+        <!-- Phase 6 -->
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--color-primary)"></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <div class="tl-phase-tag" style="color:var(--color-primary-text)">Phase 6</div>
+                <div class="tl-phase-title">Awarding Ceremony Awareness Campaign</div>
+              </div>
+              <div class="tl-card-meta">
+                <div class="tl-date">Jul – Aug onwards</div>
+                <div class="tl-status" style="background:var(--color-primary-light);color:var(--color-primary-text)">
+                  Planned</div>
+              </div>
+            </div>
+            <ul class="tl-list">
+              <li>Conceptualize the digital awareness campaign for the National Awarding Ceremony (December)</li>
+              <li>Roll out spotlight graphics, 'Road to the Awards' profile highlights, and past awardee testimonies
+              </li>
+              <li>Publish promotional teasers and criteria guidelines to drive maximum excitement</li>
+            </ul>
+            <div class="tl-phase-note">Announce as soon as Media Team is created — July / August</div>
+            <div class="tl-resp">Outreach & Media</div>
+          </div>
+        </div>
+
+        <!-- Phase 7 -->
+        <div class="tl-item tl-item-last">
+          <div class="tl-dot" style="background:var(--color-primary)"></div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <div>
+                <div class="tl-phase-tag" style="color:var(--color-primary-text)">Phase 7</div>
+                <div class="tl-phase-title">Peak Event Engagement</div>
+              </div>
+              <div class="tl-card-meta">
+                <div class="tl-date">Dec 2026 / Feb 2027</div>
+                <div class="tl-status" style="background:var(--color-primary-light);color:var(--color-primary-text)">
+                  Planned</div>
+              </div>
+            </div>
+            <ul class="tl-list">
+              <li>Live countdowns, profile features of top award achievers, and invitation broadcasts</li>
+              <li>Full on-site media management, live streaming logistics, and post-event highlight reels</li>
+            </ul>
+            <div class="tl-resp">Full Committee</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- NEXT STEPS -->
+      <div class="tl-next">
+        <div class="tl-next-title">Immediate Next Steps & Responsibilities</div>
+        <div class="tl-next-item">
+          <div class="tl-next-num">1</div>
+          <div><strong>Assign Role Leads</strong> — Allocate specific coordinators within the Committee for the
+            'Circular Drafting Wing' and 'Digital Platform Management Wing'.</div>
+        </div>
+        <div class="tl-next-item">
+          <div class="tl-next-num">2</div>
+          <div><strong>Platform Registration</strong> — Secure unified handles across all platforms (e.g.,
+            @ScoutProfileOutreach) to lock down branding before launch.</div>
+        </div>
+        <div class="tl-next-item">
+          <div class="tl-next-num">3</div>
+          <div><strong>Draft Circular Templates</strong> — Prepare text templates for the Youth Media Team Open Call and
+            District ADC requirements to ensure swift NHQ authorization.</div>
+        </div>
+      </div>
+      <div class="meta-box">
+        <div class="meta-box-title">Key Success Metrics to Track</div>
+        <div class="meta-box-body">
+          📊 Social media followers across all platforms (monthly) &nbsp;·&nbsp;
+          📹 Reels/video views per post (benchmark: 1,000+ per Reel within 48 hrs) &nbsp;·&nbsp;
+          📱 WhatsApp Channel subscribers &nbsp;·&nbsp;
+          🎥 YouTube subscriber count and watch time &nbsp;·&nbsp;
+          ✅ % of districts using standardized brand templates &nbsp;·&nbsp;
+          🗣️ Media mentions in national press &nbsp;·&nbsp;
+          👥 New scout enrolments (ultimate measure of outreach success)
+        </div>
+      </div>
+    </div>
+
+    <div id="p4" class="panel">
+      <div class="hier-legend">
+        <div class="hier-legend-item"><span class="ybadge">Youth</span> Youth-led role</div>
+        <div class="hier-legend-item"><span class="abadge">Adult</span> Adult advisor role</div>
+      </div>
+
+      <!-- NATIONAL -->
+      <div class="lvl-wrap">
+        <div class="lvl-hdr">
+          <div class="lvl-accent" style="background:var(--color-border-info)"></div>
+          <div class="lvl-info">
+            <div class="lvl-title">National Level — Scouting Profile & Media Outreach Committee</div>
+            <div class="lvl-sub">Headquarters · Governs all media strategy, standards and platforms island-wide</div>
+          </div>
+          <span class="lvl-tag"
+            style="background:var(--color-background-info);color:var(--color-text-info)">National</span>
+        </div>
+        <div class="lvl-body">
+          <div class="wing-label">Committee leadership</div>
+          <div class="lead-row">
+            <div class="chair-card">
+              <div class="hier-card-head"><span class="hier-card-title">National Youth Chairperson</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Rover Scout · Age 18–25 · Elected by committee · Leads all national meetings ·
+                Sets overall content strategy · Reports to ADC Media</div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">National Adult Advisor</span><span
+                  class="abadge">Adult</span></div>
+              <div class="hier-card-desc">ADC Media / Senior Scout Leader · Policy guidance · WOSM and SLSA compliance ·
+                Connects committee to Chief Commissioner</div>
+            </div>
+          </div>
+          <div class="wing-label">Content & language wing</div>
+          <div class="sub-row-3">
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">Sinhala Content Officer</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">All Sinhala posts, captions, scripts and translations for national platforms
+              </div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">Tamil Content Officer</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Tamil-language content · Northern and Eastern province community reach</div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">English Content Officer</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">English content · WOSM international communications · Global scouting network
+              </div>
+            </div>
+          </div>
+          <div class="wing-label">Operations wing</div>
+          <div class="sub-row-3">
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">Digital & Social Media Lead</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Facebook, Instagram, TikTok, YouTube, WhatsApp Channel · Scheduling and
+                analytics</div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">Photography & Video Lead</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">National production standards · District equipment registry · AI-assisted
+                editing oversight</div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">Brand & Design Lead</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Canva brand kit · WOSM/SLSA logo compliance · Social media templates for all
+                districts</div>
+            </div>
+          </div>
+          <div style="margin-top:8px">
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">Community & Events Outreach Lead</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Scout Week · Scout Service Month · Press relations · Commemorative content
+                calendar · Public awareness campaigns</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hier-conn">
+        <div class="hier-conn-line"></div>
+        <div class="hier-conn-dot"></div>
+        <div class="hier-conn-line"></div>
+      </div>
+
+      <!-- DISTRICT -->
+      <div class="lvl-wrap">
+        <div class="lvl-hdr">
+          <div class="lvl-accent" style="background:var(--color-border-success)"></div>
+          <div class="lvl-info">
+            <div class="lvl-title">District Level — District Media Teams</div>
+            <div class="lvl-sub">Replicated across every district · Reports to and feeds content to the national
+              committee
+            </div>
+          </div>
+          <span class="lvl-tag" style="background:var(--color-background-success);color:var(--color-text-success)">Per
+            district</span>
+        </div>
+        <div class="lvl-body">
+          <div class="wing-label">District leadership</div>
+          <div class="lead-row">
+            <div class="hier-card" style="border-color:var(--color-border-success)">
+              <div class="hier-card-head"><span class="hier-card-title">District Youth Media Representative</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">ADC Media Youth · Age 16–24 · 2 reps attend national meetings · District
+                content
+                coordinator</div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">District Adult Media Advisor</span><span
+                  class="abadge">Adult</span></div>
+              <div class="hier-card-desc">District Commissioner representative · Ensures policy compliance · Mentors
+                District Youth Rep</div>
+            </div>
+          </div>
+          <div class="wing-label">District sub-roles</div>
+          <div class="sub-row-2">
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">District Content Creator</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Produces local-language content · Applies national brand templates · Feeds
+                district content to national team</div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">District Photographer & Videographer</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Event photography and video · Maintains district media archive · Manages
+                district equipment</div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">District Social Media Handler</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Manages district-level accounts · Tracks reach and engagement · Reports
+                analytics monthly</div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">District Event Media Coordinator</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Assigned at every camp, hike and event · Responsible for Reels capture and
+                live
+                updates</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hier-conn">
+        <div class="hier-conn-line"></div>
+        <div class="hier-conn-dot"></div>
+        <div class="hier-conn-line"></div>
+      </div>
+
+      <!-- SCHOOL/GROUP -->
+      <div class="lvl-wrap">
+        <div class="lvl-hdr">
+          <div class="lvl-accent" style="background:var(--color-border-warning)"></div>
+          <div class="lvl-info">
+            <div class="lvl-title">School / Group Level — Group Media Unit</div>
+            <div class="lvl-sub">One unit per scout group or school · Grassroots content source · Entry point for youth
+              media careers</div>
+          </div>
+          <span class="lvl-tag" style="background:var(--color-background-warning);color:var(--color-text-warning)">Per
+            group</span>
+        </div>
+        <div class="lvl-body">
+          <div class="lead-row">
+            <div class="hier-card" style="border-color:var(--color-border-warning)">
+              <div class="hier-card-head"><span class="hier-card-title">Group Media Scout</span><span
+                  class="ybadge">Youth</span></div>
+              <div class="hier-card-desc">Senior Scout or Rover · Age 12–24 · Captures group activities · Submits
+                content
+                to District Rep · First step on the media leadership path</div>
+            </div>
+            <div class="hier-card">
+              <div class="hier-card-head"><span class="hier-card-title">Teacher / Leader Media Liaison</span><span
+                  class="abadge">Adult</span></div>
+              <div class="hier-card-desc">Scout Leader or school teacher · Facilitates media activities · Manages
+                parental
+                permissions for photos and video</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hier-stats">
+        <div class="hier-stat">
+          <div class="hier-stat-v">17</div>
+          <div class="hier-stat-l">Total roles</div>
+        </div>
+        <div class="hier-stat">
+          <div class="hier-stat-v">3</div>
+          <div class="hier-stat-l">Levels</div>
+        </div>
+        <div class="hier-stat">
+          <div class="hier-stat-v">14</div>
+          <div class="hier-stat-l">Youth-led</div>
+        </div>
+        <div class="hier-stat">
+          <div class="hier-stat-v">3</div>
+          <div class="hier-stat-l">Adult advisors</div>
+        </div>
+        <div class="hier-stat">
+          <div class="hier-stat-v">3</div>
+          <div class="hier-stat-l">Languages</div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
+  <!-- Put this right below your last panel (<div id="p3" class="panel">...</div>) -->
 
-  <div class="tab-bar">
-    <button class="tab active" onclick="showPanel('p1', this)">PDF Recommendations</button>
-    <button class="tab" onclick="showPanel('p2', this)">Additional Suggestions</button>
-    <button class="tab" onclick="showPanel('p3', this)">Action Roadmap</button>
-    <button class="tab" onclick="showPanel('p4',this)">Committee Hierarchy</button>
-  </div>
 
-  <div id="p1" class="panel active">
-    <p class="panel-intro">Click any recommendation to expand the expert analysis and step-by-step action plan.</p>
-    
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r1')">
-        <span class="rec-num">01</span>
-        <span class="rec-title">National Youth Media Team</span>
-        <span class="badge b-high">Critical</span>
-        <span class="toggle-icon" id="r1-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r1">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">This is the <strong>most important structural reform</strong> in the entire document. Without a functioning youth media team representing all three language mediums (Sinhala, Tamil, English), every other recommendation remains a vision on paper. Globally, scout associations like BSA (USA) and Scouts UK operate dedicated youth communications units with clear mandates and mentorship pipelines. SLSA must do the same.</div>
-        <div class="global-box"><strong>Global benchmark:</strong> Scouts Australia's National Youth Council has a dedicated media sub-team with members aged 14–25. They produce 80% of social media content. Result: 3× engagement increase in 2 years.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Draft a formal Terms of Reference (ToR) for the National Youth Media Team with roles: Team Lead, Sinhala Editor, Tamil Editor, English Editor, Videographer, Graphic Designer.</li>
-          <li>Conduct an island-wide open call for scouts (Cub → Rover) with media skills — photography, video editing, graphic design, copywriting — across all districts.</li>
-          <li>Shortlist 10–15 members ensuring representation from all 3 language mediums and all provinces.</li>
-          <li>Assign a senior Scout Leader as a mentor/advisor with a monthly briefing schedule.</li>
-          <li>Create a shared Google Workspace or Microsoft Teams environment for collaboration.</li>
-          <li>Hold a 2-day residential training camp combining media skills + scouting values before official launch.</li>
-        </ol>
-      </div>
-    </div>
 
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r2')">
-        <span class="rec-num">02</span>
-        <span class="rec-title">Official YouTube Channel</span>
-        <span class="badge b-high">Critical</span>
-        <span class="toggle-icon" id="r2-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r2">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">YouTube is the <strong>second-most visited website in Sri Lanka</strong>, and YouTube Shorts is projected to dominate brand promotion in Sri Lanka through 2026. A scout songs, crafts, and yells channel is an excellent entry point because this content is timeless, searchable, and family-friendly. AI-assisted production (auto-captioning, translation, background removal) can significantly reduce production costs.</div>
-        <div class="global-box"><strong>Global benchmark:</strong> World Scouting's official YouTube has 185K+ subscribers with content in 12 languages. Their "Scout Skills" playlist alone has 2M+ views — proof that evergreen skills content drives traffic.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Register the channel as "Sri Lanka Scouts Official" — secure the handle immediately to prevent squatting.</li>
-          <li>Create 3 playlists to start: Scout Songs, Scout Skills & Crafts, Scout Yells & Cheers.</li>
-          <li>Film the first 5 videos with a volunteer film crew at a district event — a song performed by cubs, a knot-tying tutorial, a campfire yell.</li>
-          <li>Use free AI tools (CapCut, DaVinci Resolve, auto-captions) to polish videos before upload.</li>
-          <li>Upload consistently: 1 video per week minimum. Use Shorts (under 60 seconds) for quick skill demos.</li>
-          <li>Add Sinhala, Tamil, and English auto-subtitles for all videos — YouTube provides this free.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r3')">
-        <span class="rec-num">03</span>
-        <span class="rec-title">Social Media Reach — Reels & Short Video</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r3-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r3">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Short-form video is not optional — it is the dominant content format for Sri Lankan youth in 2026. Research shows TikTok has the highest engagement rate globally at 3.73%, far ahead of other platforms. Instagram Reels reach non-followers, making them the best tool for growth. SLSA should target 3–5 Reels per week, not per month.</div>
-        <div class="global-box"><strong>Global benchmark:</strong> Scouts New Zealand grew from 8K to 47K Instagram followers in 18 months by posting daily Reels of camp activities, badge challenges, and behind-the-scenes scout life content.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Establish a content calendar with 4 content pillars: Scout Skills, Behind the Scenes, Scout Stories (member spotlight), Event Highlights.</li>
-          <li>Film Reels at every district and national event — assign a youth media member to each event specifically for Reels capture.</li>
-          <li>Post 3 Reels per week on both Facebook and Instagram. Use the same vertical video across both platforms.</li>
-          <li>Add Sinhala and Tamil captions using free tools like CapCut to maximize local reach.</li>
-          <li>Use trending audio in Reels — check Instagram's audio trending section weekly and apply to scout content.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r4')">
-        <span class="rec-num">04</span>
-        <span class="rec-title">Media Quality Standards</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r4-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r4">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Inconsistent visual branding destroys credibility. Every image or video shared without proper logos and watermarks makes SLSA look amateur. A single, downloadable "Brand Kit" must be created and distributed to all district media reps. This is standard practice in all credible scouting organizations and aligns with WOSM's 2024 refreshed brand guidelines.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Create a free SLSA Canva Team account — upload official logos, color codes (#), and approved fonts as brand assets accessible to all districts.</li>
-          <li>Design 3–5 standard post templates: Event Announcement, Achievement Highlight, Quote Card, Event Recap.</li>
-          <li>Publish a 1-page "SLSA Social Media Standards" PDF — watermark placement, logo size rules, image resolution minimum (1080×1080px for posts, 1080×1920px for Stories/Reels).</li>
-          <li>Mandate that all official accounts use these templates before posting.</li>
-          <li>Conduct a quarterly "content audit" — review recent posts from all district accounts for standards compliance.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r5')">
-        <span class="rec-num">05</span>
-        <span class="rec-title">Production Quality — District Resources</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r5-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r5">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Districts have untapped talent — scouts with DSLR cameras, video editing software, and even drone licenses. A resource mapping exercise will reveal what already exists. The challenge is coordination, not resources. A "District Media Resource Registry" connecting skilled scouts to national-level projects will transform production quality without additional cost.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Send a skills survey to all district commissioners — ask scouts to self-identify as: photographer, videographer, video editor, graphic designer, drone operator.</li>
-          <li>Create a shared national registry (Google Sheet or Notion) listing available equipment and skills by district.</li>
-          <li>Organize a "Media Skills Day" — a half-day workshop at each district event where scouts teach each other photography/video basics.</li>
-          <li>Nominate a "District Media Officer" in each district to coordinate production and maintain equipment standards.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r6')">
-        <span class="rec-num">06</span>
-        <span class="rec-title">WOSM Logo Usage — URGENT</span>
-        <span class="badge b-high">Critical</span>
-        <span class="toggle-icon" id="r6-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r6">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block"><strong>This is time-sensitive.</strong> WOSM officially refreshed its brand and visual identity in May 2024 — a completely redesigned World Scout Emblem with updated logo and wordmark was approved by the World Scout Committee. Many SLSA districts are still using the old logo, which is now outdated. WOSM also provides a free "Brand Centre" with downloadable assets at learn.scout.org. Immediate action is needed.</div>
-        <div class="global-box"><strong>WOSM Update:</strong> The new World Scouting brand was approved in May 2024 with a "bold, modern, youthful, and digital" identity specifically designed for social media use. SLSA must communicate this to all districts immediately.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Download the updated WOSM brand assets from the official WOSM Brand Centre: <strong>learn.scout.org</strong> → "World Scouting Brand Centre".</li>
-          <li>Issue an official circular from the Chief Commissioner to all districts — attach the updated logo files in PNG, SVG, and JPG formats.</li>
-          <li>Conduct a 1-hour online awareness webinar specifically on logo usage rules — record it and share via WhatsApp and email.</li>
-          <li>Remove all outdated logos from official digital accounts within 30 days of the circular.</li>
-          <li>Add a "Logo Compliance Check" to the annual district review process.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r7')">
-        <span class="rec-num">07</span>
-        <span class="rec-title">SLSA Logo Usage Guidelines</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r7-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r7">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Without written guidelines, scouts will continue using the SLSA logo on unofficial merchandise, personal posts, and non-approved materials — diluting brand identity. A simple, illustrated 2-page guideline document is sufficient. Model it after WOSM's Brand Manual available on the Scout Learning Zone.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Draft a 2-page "SLSA Logo Usage Guide" covering: approved colors, minimum sizes, clear space rules, and prohibited uses (stretching, recoloring, adding effects).</li>
-          <li>Translate into all three languages — Sinhala, Tamil, English.</li>
-          <li>Distribute via email, WhatsApp, and pin on the official SLSA website and social media profiles.</li>
-          <li>Create a simple "Do and Don't" visual graphic — easy for young scouts to understand.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r8')">
-        <span class="rec-num">08</span>
-        <span class="rec-title">WhatsApp Channel</span>
-        <span class="badge b-high">Critical</span>
-        <span class="toggle-icon" id="r8-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r8">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">WhatsApp is used by the vast majority of Sri Lankan youth and their parents. A WhatsApp Channel (one-way broadcast, not a group) is ideal for SLSA — it allows instant, direct communication to thousands of followers without spam concerns. This is fundamentally different from WhatsApp groups and does not expose member phone numbers. Research confirms Facebook, WhatsApp, and YouTube are the top 3 platforms among Sri Lankan youth.</div>
-        <div class="global-box"><strong>Sri Lanka context:</strong> Facebook dominates with ~7 million users, but WhatsApp is used for daily communication — especially for school-aged youth coordinating within scout groups. A Channel reaches them where they already are.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Create the official "SLSA Updates" WhatsApp Channel from the national HQ account.</li>
-          <li>Share the Channel link in all existing WhatsApp scout groups — district groups, leader groups, parent groups.</li>
-          <li>Post on all social media platforms asking members to subscribe: "Follow our WhatsApp Channel for instant event updates."</li>
-          <li>Assign a dedicated Channel Manager (from the youth media team) to post updates 3–5 times per week.</li>
-          <li>Content types: Event reminders, registration deadlines, weather updates for camps, quick photo highlights, badge achievement announcements.</li>
-          <li>Also create district-level WhatsApp Channels linked to the national one for local news.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r9')">
-        <span class="rec-num">09</span>
-        <span class="rec-title">Scout Profile — The Scarf Identity</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r9-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r9">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">The scout scarf (necker) is one of the most recognizable symbols of scouting worldwide. When scouts appear in public without it, a major visibility opportunity is missed. This is not about discipline — it is about <strong>pride and identity</strong>. The solution is positive reinforcement and clear, practical guidance on when the scarf must be worn, using cheerful, youth-friendly communication rather than top-down instructions.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Issue a simple "When to wear your scarf" illustrated guide — include: all official scout events, public service activities, travel to/from events, national days.</li>
-          <li>Start a social media campaign: <strong>#ProudToBeAScout</strong> — encourage scouts to post photos in full uniform including scarf, tagging SLSA.</li>
-          <li>Recognize and spotlight scouts who consistently maintain proper uniform on the SLSA social media pages.</li>
-          <li>At every award ceremony, explicitly acknowledge correct uniform wearing as part of scout excellence.</li>
-          <li>Distribute a pocket-card reminder to all scouts at the start of each scouting year listing uniform requirements.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r10')">
-        <span class="rec-num">10</span>
-        <span class="rec-title">Scout Profile — Public Awareness Events</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r10-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r10">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Scout Service Month and Scout Week are globally recognized scouting milestones that SLSA consistently underutilizes. The strategy proposed — social media content + Chief Commissioner interviews + community feedback — is correct and comprehensive. The missing ingredient is a centralized, coordinated content calendar pushed to all districts simultaneously, not ad-hoc posts.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Mark Scout Service Month and Scout Week on a national SLSA content calendar shared with all districts 60 days in advance.</li>
-          <li>Film a 3–5 minute video interview with the Chief Commissioner and ADC Programme to be released on the first day of Scout Week.</li>
-          <li>Create a "30 Days of Scouting Impact" Instagram/Facebook campaign during Scout Service Month — one post daily highlighting a different service project.</li>
-          <li>Collect short video testimonials from community beneficiaries of scout projects — these are the most powerful content type for public awareness.</li>
-          <li>Send a press kit to Sri Lankan national media (Rupavahini, ITN, Hiru, Daily News) before Scout Week with key facts and interview requests.</li>
-          <li>Collaborate with the Ministry of Education to issue a school circular recognizing Scout Week activities.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r11')">
-        <span class="rec-num">11</span>
-        <span class="rec-title">Social Media Trends — Modern Content</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r11-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r11">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Global scouting content that goes viral shares common traits: authentic scout moments (not staged), outdoor adventure footage, skill demonstrations, and day-in-the-life formats. Camp and hike content performs exceptionally well because it showcases what non-scouts wish they could do. The "adventure and skill" identity of scouting is a natural fit for trending content formats — SLSA simply needs to capture and package it correctly.</div>
-        <div class="global-box"><strong>Global trend:</strong> "Day in the life at scout camp" format videos consistently receive 5–10× more engagement than official announcement posts. Authenticity beats production value every time for youth audiences.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>At every camp and hike, assign a "Content Scout" responsible for capturing candid, authentic moments — not just posed group photos.</li>
-          <li>Create a "Scout Challenge" series — short Reels where scouts demonstrate a skill (fire lighting, first aid, tent pitching) and challenge others to try.</li>
-          <li>Use trending audio from Instagram/TikTok — check the "Trending" audio section weekly and overlay camp/hike footage.</li>
-          <li>Post "Before/After" transformation Reels — "Before scout training vs. After" — these are highly shareable.</li>
-          <li>Follow global scout accounts (World Scouting, Scouts UK, BSA, Scouts Australia) and adapt their trending content formats to a Sri Lankan context.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r12')">
-        <span class="rec-num">12</span>
-        <span class="rec-title">Youth Media Appointments</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r12-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r12">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Youth involvement in decision-making is a core pillar of WOSM's Strategy for Scouting. WOSM explicitly emphasizes youth leadership and youth involvement across all levels. Appointing youth to formal roles like Assistant District Commissioner (ADC) for Media creates accountability, mentorship opportunities, and real leadership development — which is ultimately what scouting is about.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Create a formal "ADC Media (Youth)" designation within the district commissioner structure — open only to scouts aged 18–25.</li>
-          <li>Advertise these positions openly at district level with clear selection criteria: media skills + scouting record + language proficiency.</li>
-          <li>Pair each ADC Media Youth with an experienced adult ADC Media as a mentor for the first year.</li>
-          <li>Include youth ADC Media members in all national media committee meetings with full voting rights.</li>
-          <li>Recognize these appointments publicly via social media and at annual award ceremonies.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r13')">
-        <span class="rec-num">13</span>
-        <span class="rec-title">Youth Representation at District Meetings</span>
-        <span class="badge b-low">Medium</span>
-        <span class="toggle-icon" id="r13-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r13">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Allowing 2 sub-committee youth representatives to attend ADC Media meetings is a practical, low-cost reform with high impact on communication and alignment. District-level challenges are invisible to the national sub-committee unless there is a structured feedback channel. This creates one.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Formally amend the ADC Media meeting agenda to include a standing "Youth Report" agenda item (10 minutes) presented by the 2 youth reps.</li>
-          <li>Rotate the 2 youth representative positions every 6 months to expose more youth to district-level governance.</li>
-          <li>Have youth reps submit a 1-page written summary after each meeting to the national sub-committee chair.</li>
-          <li>Create a shared WhatsApp group connecting all district youth media reps with the national sub-committee for ongoing communication.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r14')">
-        <span class="rec-num">14</span>
-        <span class="rec-title">Commemorative Social Media Content</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r14-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r14">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Scarf Day, F.G. Stevenson Day, Nature Day, World Scout Day, Thinking Day — all of these represent zero-cost content opportunities that SLSA is missing. A simple annual commemorative content calendar, pre-scheduled 3 months in advance, would ensure no important date is missed. This builds brand identity and gives the audience regular reasons to engage.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Create a comprehensive "SLSA Annual Commemorative Content Calendar" listing every relevant day with: post theme, suggested visual concept, and platform.</li>
-          <li>Pre-design template posts for each commemorative day — so they can be posted with minimal last-minute effort.</li>
-          <li>For major dates (World Scout Day, Scarf Day), prepare 3 content pieces: 1 static post, 1 Reel, 1 WhatsApp Channel announcement.</li>
-          <li>Add lesser-known but meaningful days: International Youth Day (12 Aug), World Environment Day (5 Jun, tied to nature activities).</li>
-          <li>Schedule posts using Meta Business Suite to ensure they go live at optimal times even if the team is offline.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r15')">
-        <span class="rec-num">15</span>
-        <span class="rec-title">TikTok Channel</span>
-        <span class="badge b-med">High</span>
-        <span class="toggle-icon" id="r15-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r15">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">TikTok has the highest engagement rate of any social platform (3.73% average). Sri Lankan youth heavily use TikTok. Creating a TikTok account is free and scout content — outdoor skills, camp moments, team challenges — is perfectly suited to the platform. The content produced for Reels can be directly repurposed for TikTok with minimal editing. One strategy, multiple platforms.</div>
-        <div class="global-box"><strong>Strategic note:</strong> When India banned TikTok in 2020, users migrated instantly to Instagram Reels and YouTube Shorts. Build TikTok but also cross-post to Reels and Shorts simultaneously — this protects against platform risk.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Register @SriLankaScouts on TikTok immediately — verify the account as an official organization.</li>
-          <li>Repurpose existing Reels content onto TikTok with minor format adjustments (add TikTok-native text, sounds).</li>
-          <li>Launch with a "7-Day Scout Challenge" — post one TikTok per day for a week showcasing different scout skills to rapidly gain early followers.</li>
-          <li>Use trending TikTok sounds and challenges as frameworks — overlay scout footage onto viral audio/formats.</li>
-          <li>Engage with comments actively in the first 90 days — the TikTok algorithm rewards early engagement response.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="rec-card">
-      <div class="rec-head" onclick="toggle('r16')">
-        <span class="rec-num">16</span>
-        <span class="rec-title">Increasing Social Media Followers</span>
-        <span class="badge b-low">Medium</span>
-        <span class="toggle-icon" id="r16-icon">▾</span>
-      </div>
-      <div class="rec-body" id="r16">
-        <div class="section-label">Expert Analysis</div>
-        <div class="analysis-block">Follower count is a lagging indicator — it grows when content quality and consistency are in place. Competitions are a proven growth tactic, but the most sustainable growth comes from consistently posting content that non-scouts want to share. "Tag a friend who needs scouting" posts, shareable skill tips, and emotionally resonant community service content drive organic growth better than giveaways alone.</div>
-        <div class="section-label">Step-by-Step Actions</div>
-        <ol class="step-list">
-          <li>Run a quarterly "Scout Photo Challenge" — members submit their best scout photo with a hashtag. Top 3 are featured on the official page. This is organic follower growth.</li>
-          <li>Post "Did You Know? Scouting in Sri Lanka" facts 2× per week — these are highly shareable and attract new followers.</li>
-          <li>Collaborate with popular Sri Lankan youth influencers or content creators to visit a scout camp and post about it — this exposes SLSA to hundreds of thousands of new followers.</li>
-          <li>Ask current followers to "share this page with one friend who has a child interested in scouting" — direct calls to action work.</li>
-          <li>Run a referral campaign: "The school group that gets the most new followers to our page wins a trophy at the National Jamboree" — this enlists every scout as a follower recruiter.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-
-  <div id="p2" class="panel">
-    <p class="panel-intro">Based on the Research and current global best practices, these are additional recommendations not covered in the submitted PDF.</p>
-
-    <div class="addl-card">
-      <h3><span class="badge b-high">A</span> Trilingual Content Strategy — The Missing Gap</h3>
-      <p>The PDF mentions language mediums but never addresses a <strong>structured trilingual content strategy</strong>. SLSA has scouts across Sinhala, Tamil, and English communities, but nearly all visible social content is in Sinhala only. This alienates Tamil-speaking scouts and their families — a missed recruitment and retention opportunity. Every major post should be translated or at minimum captioned in all 3 languages. This alone could significantly increase membership in Northern and Eastern provinces.</p>
-    </div>
-
-    <div class="addl-card">
-      <h3><span class="badge b-high">B</span> Scout Alumni Network — Untapped Resource</h3>
-      <p>Sri Lanka has thousands of former scouts, many now in prominent professional roles. None of the 16 recommendations mention engaging scout alumni. A <strong>"Once a Scout, Always a Scout" digital alumni campaign</strong> — inviting prominent alumni to share their scouting story on social media — would generate massive authentic content and inspire current youth. SLSA should create an Alumni LinkedIn group and feature one "Scout Alumni Spotlight" per month.</p>
-    </div>
-
-    <div class="addl-card">
-      <h3><span class="badge b-med">C</span> Content Management System — Operational Infrastructure</h3>
-      <p>Currently there is no centralized tool for scheduling, approving, and tracking social media posts across districts. SLSA needs a free tool like <strong>Buffer or Meta Business Suite</strong> to schedule content in advance, assign approval workflows, and track analytics. Without this, the YouTube channel, TikTok, Instagram, Facebook, and WhatsApp Channel will become chaotic — managed by different individuals with no coordination.</p>
-    </div>
-
-    <div class="addl-card">
-      <h3><span class="badge b-med">D</span> Annual SLSA Media Awards</h3>
-      <p>Recognition drives behavior. Create an <strong>"SLSA Annual Media Excellence Award"</strong> with categories: Best Photo, Best Short Video, Best Social Media Post, Best Event Coverage, Most Improved District Media Team. Award at the Annual Scout Conference. This costs nothing but motivates every district media team to produce high-quality content throughout the year — because they are competing for recognition.</p>
-    </div>
-
-    <div class="addl-card">
-      <h3><span class="badge b-med">E</span> School & Parent Outreach — Direct to Decision Makers</h3>
-      <p>In Sri Lanka, a child joins scouts because a parent or teacher encouraged it. None of the 16 recommendations address <strong>parent and teacher communication</strong>. A dedicated "Parents of Scouts" WhatsApp Channel and quarterly newsletter explaining what their children learned — leadership skills, first aid, teamwork — would significantly boost enrollment and retention. Parents who feel informed become the most effective recruiters for new scouts.</p>
-    </div>
-
-    <div class="addl-card">
-      <h3><span class="badge b-low">F</span> Partnerships with Sri Lankan Media — Earned Media</h3>
-      <p>Earned media (free news coverage) is far more credible than any social media post. SLSA should build formal relationships with Sri Lankan television channels and newspapers. Propose a <strong>monthly "Scout Spotlight" segment</strong> on a national channel — showcasing a district's community service project. This costs nothing but time and dramatically increases public visibility beyond SLSA's current follower base.</p>
-    </div>
-
-    <div class="addl-card">
-      <h3><span class="badge b-low">G</span> SLSA Website as a Media Hub</h3>
-      <p>The scout.lk website is currently a repository, not a media hub. Adding a <strong>Photo & Video Gallery, a Scout Stories blog, a Press section with downloadable media kits, and an embedded YouTube/social feed</strong> would transform it into a destination that generates credibility, supports recruitment, and provides journalists with easy access to SLSA information. A strong website also improves Google search visibility for "scouts Sri Lanka" queries.</p>
-    </div>
-  </div>
-
-  <div id="p3" class="panel">
-    <p class="panel-intro">A phased implementation roadmap based on urgency, resource requirements, and expected impact.</p>
-
-    <div class="roadmap-phase">
-      <div class="phase-hdr phase-hdr-high">
-        <span>⚡</span>
-        <span>Phase 1 — Immediate (0–90 days)</span>
-        <span class="badge b-high" style="margin-left:auto">Critical First Steps</span>
-      </div>
-      <div class="phase-items">
-        <div class="phase-item"><div class="dot dot-high"></div><span><strong>Download & distribute updated WOSM 2024 brand assets</strong> — Issue circular to all districts within 7 days</span></div>
-        <div class="phase-item"><div class="dot dot-high"></div><span><strong>Register TikTok & YouTube channels</strong> — Secure official handles before others do</span></div>
-        <div class="phase-item"><div class="dot dot-high"></div><span><strong>Launch WhatsApp Channel</strong> — Broadcast to all existing WhatsApp groups with link</span></div>
-        <div class="phase-item"><div class="dot dot-high"></div><span><strong>Create Canva Brand Kit</strong> — Upload logos, colors, templates for all districts</span></div>
-        <div class="phase-item"><div class="dot dot-high"></div><span><strong>Issue open call for National Youth Media Team</strong> — Application deadline within 30 days</span></div>
-        <div class="phase-item"><div class="dot dot-high"></div><span><strong>Issue SLSA Logo Usage Guide</strong> — Translate to all 3 languages and distribute</span></div>
-      </div>
-    </div>
-
-    <div class="roadmap-phase">
-      <div class="phase-hdr phase-hdr-med">
-        <span>▶</span>
-        <span>Phase 2 — Short Term (3–6 months)</span>
-        <span class="badge b-med" style="margin-left:auto">Build Foundation</span>
-      </div>
-      <div class="phase-items">
-        <div class="phase-item"><div class="dot dot-med"></div><span><strong>Launch National Youth Media Team</strong> — Hold 2-day residential training camp</span></div>
-        <div class="phase-item"><div class="dot dot-med"></div><span><strong>Begin regular social media posting</strong> — 3 Reels/week minimum on Facebook & Instagram</span></div>
-        <div class="phase-item"><div class="dot dot-med"></div><span><strong>Upload first 10 YouTube videos</strong> — Scout songs, skills, yells playlist</span></div>
-        <div class="phase-item"><div class="dot dot-med"></div><span><strong>Conduct District Media Skills Survey</strong> — Map equipment and talent island-wide</span></div>
-        <div class="phase-item"><div class="dot dot-med"></div><span><strong>Launch #ProudToBeAScout scarf campaign</strong> — Scout profile and identity building</span></div>
-        <div class="phase-item"><div class="dot dot-med"></div><span><strong>Appoint ADC Media Youth positions</strong> — District-level youth media appointments</span></div>
-        <div class="phase-item"><div class="dot dot-med"></div><span><strong>Create Annual Commemorative Content Calendar</strong> — Pre-schedule all important dates</span></div>
-      </div>
-    </div>
-
-    <div class="roadmap-phase">
-      <div class="phase-hdr phase-hdr-low">
-        <span>◎</span>
-        <span>Phase 3 — Medium Term (6–12 months)</span>
-        <span class="badge b-low" style="margin-left:auto">Scale & Sustain</span>
-      </div>
-      <div class="phase-items">
-        <div class="phase-item"><div class="dot dot-low"></div><span><strong>Launch SLSA Annual Media Awards</strong> — Presented at Annual Scout Conference</span></div>
-        <div class="phase-item"><div class="dot dot-low"></div><span><strong>Launch Scout Alumni Campaign</strong> — "Once a Scout, Always a Scout" LinkedIn & social</span></div>
-        <div class="phase-item"><div class="dot dot-low"></div><span><strong>Implement Meta Business Suite</strong> — Centralized scheduling, analytics, approval workflows</span></div>
-        <div class="phase-item"><div class="dot dot-low"></div><span><strong>Formalize trilingual content strategy</strong> — All key posts in Sinhala, Tamil, English</span></div>
-        <div class="phase-item"><div class="dot dot-low"></div><span><strong>Build media relationships with national TV/newspapers</strong> — Propose monthly Scout Spotlight segment</span></div>
-        <div class="phase-item"><div class="dot dot-low"></div><span><strong>Redesign scout.lk as media hub</strong> — Add gallery, blog, press kit, social feeds</span></div>
-        <div class="phase-item"><div class="dot dot-low"></div><span><strong>Launch "Parents of Scouts" WhatsApp Channel</strong> — Monthly newsletter on child's development</span></div>
-        <div class="phase-item"><div class="dot dot-low"></div><span><strong>Review and measure</strong> — Quarterly analytics review comparing follower growth, reach, engagement</span></div>
-      </div>
-    </div>
-
-    <div class="meta-box">
-      <div class="meta-box-title">Key Success Metrics to Track</div>
-      <div class="meta-box-body">
-        📊 Social media followers across all platforms (monthly) &nbsp;·&nbsp; 
-        📹 Reels/video views per post (benchmark: 1,000+ per Reel within 48 hrs) &nbsp;·&nbsp; 
-        📱 WhatsApp Channel subscribers &nbsp;·&nbsp; 
-        🎥 YouTube subscriber count and watch time &nbsp;·&nbsp; 
-        ✅ % of districts using standardized brand templates &nbsp;·&nbsp; 
-        🗣️ Media mentions in national press &nbsp;·&nbsp; 
-        👥 New scout enrolments (ultimate measure of outreach success)
-      </div>
-    </div>
-  </div>
-
-  <div id="p4" class="panel">
-  <div class="hier-legend">
-    <div class="hier-legend-item"><span class="ybadge">Youth</span> Youth-led role</div>
-    <div class="hier-legend-item"><span class="abadge">Adult</span> Adult advisor role</div>
-  </div>
-
-  <!-- NATIONAL -->
-  <div class="lvl-wrap">
-    <div class="lvl-hdr">
-      <div class="lvl-accent" style="background:var(--color-border-info)"></div>
-      <div class="lvl-info">
-        <div class="lvl-title">National Level — Scouting Profile & Media Outreach Committee</div>
-        <div class="lvl-sub">Headquarters · Governs all media strategy, standards and platforms island-wide</div>
-      </div>
-      <span class="lvl-tag" style="background:var(--color-background-info);color:var(--color-text-info)">National</span>
-    </div>
-    <div class="lvl-body">
-      <div class="wing-label">Committee leadership</div>
-      <div class="lead-row">
-        <div class="chair-card">
-          <div class="hier-card-head"><span class="hier-card-title">National Youth Chairperson</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Rover Scout · Age 18–25 · Elected by committee · Leads all national meetings · Sets overall content strategy · Reports to ADC Media</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">National Adult Advisor</span><span class="abadge">Adult</span></div>
-          <div class="hier-card-desc">ADC Media / Senior Scout Leader · Policy guidance · WOSM and SLSA compliance · Connects committee to Chief Commissioner</div>
-        </div>
-      </div>
-      <div class="wing-label">Content & language wing</div>
-      <div class="sub-row-3">
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">Sinhala Content Officer</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">All Sinhala posts, captions, scripts and translations for national platforms</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">Tamil Content Officer</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Tamil-language content · Northern and Eastern province community reach</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">English Content Officer</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">English content · WOSM international communications · Global scouting network</div>
-        </div>
-      </div>
-      <div class="wing-label">Operations wing</div>
-      <div class="sub-row-3">
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">Digital & Social Media Lead</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Facebook, Instagram, TikTok, YouTube, WhatsApp Channel · Scheduling and analytics</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">Photography & Video Lead</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">National production standards · District equipment registry · AI-assisted editing oversight</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">Brand & Design Lead</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Canva brand kit · WOSM/SLSA logo compliance · Social media templates for all districts</div>
-        </div>
-      </div>
-      <div style="margin-top:8px">
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">Community & Events Outreach Lead</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Scout Week · Scout Service Month · Press relations · Commemorative content calendar · Public awareness campaigns</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hier-conn"><div class="hier-conn-line"></div><div class="hier-conn-dot"></div><div class="hier-conn-line"></div></div>
-
-  <!-- DISTRICT -->
-  <div class="lvl-wrap">
-    <div class="lvl-hdr">
-      <div class="lvl-accent" style="background:var(--color-border-success)"></div>
-      <div class="lvl-info">
-        <div class="lvl-title">District Level — District Media Teams</div>
-        <div class="lvl-sub">Replicated across every district · Reports to and feeds content to the national committee</div>
-      </div>
-      <span class="lvl-tag" style="background:var(--color-background-success);color:var(--color-text-success)">Per district</span>
-    </div>
-    <div class="lvl-body">
-      <div class="wing-label">District leadership</div>
-      <div class="lead-row">
-        <div class="hier-card" style="border-color:var(--color-border-success)">
-          <div class="hier-card-head"><span class="hier-card-title">District Youth Media Representative</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">ADC Media Youth · Age 16–24 · 2 reps attend national meetings · District content coordinator</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">District Adult Media Advisor</span><span class="abadge">Adult</span></div>
-          <div class="hier-card-desc">District Commissioner representative · Ensures policy compliance · Mentors District Youth Rep</div>
-        </div>
-      </div>
-      <div class="wing-label">District sub-roles</div>
-      <div class="sub-row-2">
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">District Content Creator</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Produces local-language content · Applies national brand templates · Feeds district content to national team</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">District Photographer & Videographer</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Event photography and video · Maintains district media archive · Manages district equipment</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">District Social Media Handler</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Manages district-level accounts · Tracks reach and engagement · Reports analytics monthly</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">District Event Media Coordinator</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Assigned at every camp, hike and event · Responsible for Reels capture and live updates</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hier-conn"><div class="hier-conn-line"></div><div class="hier-conn-dot"></div><div class="hier-conn-line"></div></div>
-
-  <!-- SCHOOL/GROUP -->
-  <div class="lvl-wrap">
-    <div class="lvl-hdr">
-      <div class="lvl-accent" style="background:var(--color-border-warning)"></div>
-      <div class="lvl-info">
-        <div class="lvl-title">School / Group Level — Group Media Unit</div>
-        <div class="lvl-sub">One unit per scout group or school · Grassroots content source · Entry point for youth media careers</div>
-      </div>
-      <span class="lvl-tag" style="background:var(--color-background-warning);color:var(--color-text-warning)">Per group</span>
-    </div>
-    <div class="lvl-body">
-      <div class="lead-row">
-        <div class="hier-card" style="border-color:var(--color-border-warning)">
-          <div class="hier-card-head"><span class="hier-card-title">Group Media Scout</span><span class="ybadge">Youth</span></div>
-          <div class="hier-card-desc">Senior Scout or Rover · Age 12–24 · Captures group activities · Submits content to District Rep · First step on the media leadership path</div>
-        </div>
-        <div class="hier-card">
-          <div class="hier-card-head"><span class="hier-card-title">Teacher / Leader Media Liaison</span><span class="abadge">Adult</span></div>
-          <div class="hier-card-desc">Scout Leader or school teacher · Facilitates media activities · Manages parental permissions for photos and video</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hier-stats">
-    <div class="hier-stat"><div class="hier-stat-v">17</div><div class="hier-stat-l">Total roles</div></div>
-    <div class="hier-stat"><div class="hier-stat-v">3</div><div class="hier-stat-l">Levels</div></div>
-    <div class="hier-stat"><div class="hier-stat-v">14</div><div class="hier-stat-l">Youth-led</div></div>
-    <div class="hier-stat"><div class="hier-stat-v">3</div><div class="hier-stat-l">Adult advisors</div></div>
-    <div class="hier-stat"><div class="hier-stat-v">3</div><div class="hier-stat-l">Languages</div></div>
-  </div>
-</div>
-</div>
-<!-- Put this right below your last panel (<div id="p3" class="panel">...</div>) -->
-  
   <footer class="app-footer">
     <p>&copy; <span id="current-year">2026</span> Scouting Profile and Outreach Committee. All rights reserved.</p>
     <p class="footer-sub">Strategic Report & Analysis by Lochana Karunarathna</p>
     <p class="footer-sub">SLSA</p>
   </footer>
 
-</div> <!-- This is the closing tag for your app-container -->
-<script src="script.js"></script>
+  </div> <!-- This is the closing tag for your app-container -->
+  <script src="script.js"></script>
 
 </body>
+
 </html>
